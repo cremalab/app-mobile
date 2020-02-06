@@ -29,9 +29,8 @@ export const Welcome = () => (
       stories as you want. In other words a story is like a visual test case.
     </Text>
     <Text style={styles.content}>
-      We have added some stories inside the "storybook/stories" directory for
-      examples. Try editing the "storybook/stories/Welcome.js" file to edit this
-      message.
+      To add a new story you need to import it inside of
+      ./src/stories/index.tsx.
     </Text>
   </View>
 )
