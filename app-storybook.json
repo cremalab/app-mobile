@@ -26,6 +26,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "entryPoint": "/src/index.tsx"
+    "entryPoint": "/src/index.storybook.tsx"
   }
 }
