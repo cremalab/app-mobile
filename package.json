@@ -5,7 +5,7 @@
     "start:ios": "expo start --ios",
     "start:web": "expo start --web",
     "start:playground": "run-p start:playground:*",
-    "start:playground:expo": "expo start --config=app-storybook.json",
+    "start:playground:expo": "expo start --config=app-storybook.json --no-dev",
     "start:playground:storybook": "start-storybook",
     "start:types": "tsc --w",
     "test": "jest",
@@ -15,6 +15,8 @@
     "test:unit": "npm run test",
     "test:types": "tsc --noEmit",
     "test:visual": "loki test",
+    "test:visual:ios": "loki test --targetFilter=ios",
+    "test:visual:android": "loki test --targetFilter=android",
     "test:visual:update": "loki update",
     "test:visual:approve": "loki approve",
     "prepush": "npm run test:ci",
@@ -86,8 +88,11 @@
   "loki": {
     "requireReference": true,
     "configurations": {
-      "ios.iphone7": {
+      "ios": {
         "target": "ios.simulator"
+      },
+      "android": {
+        "target": "android.emulator"
       }
     }
   }
