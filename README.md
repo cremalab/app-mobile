@@ -46,7 +46,7 @@ Run the following scripts with `npm run <SCRIPT_HERE>`:
 - `start:ios` - start the expo bundler and an iOS simulator
 - `start:android` - start the expo bundler and an android emulator
 - `start:web` - start the expo bundler and the web app
-- `start:playground` - start component playground with storybook
+- `start:visual` - start component playground with storybook
 - `start:types` - start tsc in watch mode
 - `test:types` - run tsc
 - `test:lint` - run linter
