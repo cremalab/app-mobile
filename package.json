@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@expo/webpack-config": "^0.10.12",
+    "@expo/webpack-config": "^0.11.1",
     "@storybook/addon-actions": "^5.3.11",
     "@storybook/addon-links": "^5.3.11",
     "@storybook/addons": "^5.3.11",
@@ -57,7 +57,7 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-react-native": "^3.8.1",
-    "expo-cli": "^3.11.9",
+    "expo-cli": "^3.13.1",
     "husky": "^4.2.1",
     "husky-add-issue-tracker": "0.0.9",
     "jest-expo": "^36.0.1",
