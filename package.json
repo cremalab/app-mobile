@@ -1,4 +1,12 @@
 {
+  "name": "crema-app-mobile",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cremalab/crema-app-mobile.git"
+  },
   "scripts": {
     "start": "expo start",
     "start:android": "expo start --android",
@@ -57,7 +65,6 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "eslint-plugin-react-native": "^3.8.1",
-    "expo-cli": "^3.13.1",
     "husky": "^4.2.1",
     "husky-add-issue-tracker": "0.0.9",
     "jest-expo": "^36.0.1",
