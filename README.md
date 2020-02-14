@@ -19,10 +19,10 @@ This project includes configuration and tooling that conforms to Crema's baselin
 1. [Install Node/NPM](https://nodejs.org/en/)
 2. [Install NVM](https://github.com/creationix/nvm#installation-and-update) (Node Version Manager)
 3. `nvm install 'lts/*' && nvm use`
-4. `npm i` (install project dependencies)
-5. [Install the ESLint plugin for ~~your editor~~ VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-6. Enable "Auto-Fix on Save" in `settings.json`:
-
+4. `npm i -g expo-cli`
+5. `npm i` (install project dependencies)
+6. [Install the ESLint plugin for ~~your editor~~ VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+7. Enable "Auto-Fix on Save" in `settings.json`:
 ```
 // There will likely be other settings within this JSON object...
 {
@@ -37,6 +37,8 @@ This project includes configuration and tooling that conforms to Crema's baselin
   ]
 }
 ```
+8. Ensure that `XCode` and the related command line tools are setup using [this guide](https://docs.expo.io/versions/latest/workflow/ios-simulator/)
+9. Ensure that `Android Studio` and a virtual device (Emulator) are setup using [this guide](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/)
 
 ## 👟 Run
 
