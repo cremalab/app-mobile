@@ -1,5 +1,6 @@
 # Crema App - Mobile 📱
 
+[![Build Status](https://github.com/cremalab/crema-app-mobile/workflows/CI/badge.svg)](https://github.com/cremalab/crema-app-mobile/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project includes configuration and tooling that conforms to Crema's baseline best-practices for a Mobile Application.
