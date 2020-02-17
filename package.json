@@ -14,8 +14,9 @@
     "start:web": "expo start --web",
     "start:visual": "run-p start:visual:*",
     "start:visual:expo": "expo start --config=app-storybook.json --no-dev",
-    "start:visual:storybook": "start-storybook",
+    "start:visual:storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
     "start:types": "tsc --w",
+    "start:unit": "npm run test -- --watch",
     "test": "jest",
     "test:ci": "CI=true run-s test:types test:lint test:unit",
     "test:lint": "eslint -c ./.eslintrc.js 'src/**/*.{ts,tsx}'",
@@ -80,17 +81,6 @@
       "pre-push": "npm run prepush",
       "prepare-commit-msg": "husky-add-issue-tracker"
     }
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
   },
   "loki": {
     "requireReference": true,

@@ -4,7 +4,8 @@ import { render } from "@testing-library/react-native"
 
 describe("App", () => {
   it("renders", () => {
-    const { container } = render(<App />)
-    expect(container).toBeDefined()
+    const { getByText } = render(<App />)
+    const text = getByText("Open up App.tsx to start working on your app!")
+    expect(text).toBeDefined()
   })
 })
