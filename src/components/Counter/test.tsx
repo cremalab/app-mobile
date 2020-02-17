@@ -1,6 +1,6 @@
+import { fireEvent, render } from "@testing-library/react-native"
 import React from "react"
 import { Counter } from "."
-import { render, fireEvent } from "@testing-library/react-native"
 
 describe("Counter", () => {
   it("displays the initial count", () => {

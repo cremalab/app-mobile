@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Text, View, Button, StyleSheet } from "react-native"
+import { Button, StyleSheet, Text, View } from "react-native"
 
 export function Counter() {
   const [count, setCount] = useState(0)

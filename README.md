@@ -46,11 +46,13 @@ This project includes configuration and tooling that conforms to Crema's baselin
 Run the following scripts with `npm run <SCRIPT_HERE>`:
 
 - `start` - start the expo bundler
-- `start:ios` - start the expo bundler and an iOS simulator
 - `start:android` - start the expo bundler and an android emulator
+- `start:ios` - start the expo bundler and an iOS simulator
 - `start:web` - start the expo bundler and the web app
 - `start:visual` - start component playground with storybook
 - `start:types` - start tsc in watch mode
+- `start:unit` - start the unit tests in watch mode
+- `test:ci` - run the same tests that the CI runs
 - `test:types` - run tsc
 - `test:lint` - run linter
 - `test:lint:fix` - run linter and fix if possible
@@ -93,5 +95,7 @@ src
 │   │   └── test.tsx // Unit Tests (Jest)
 │   ├── decoratorCentered // Used in stories.tsx
 │   └── shallowRender // Used to render components in test.tsx
+├── stories // Directory used to load storybook stories in one place
+│   └── index.tsx
 └── index.tsx // Root Module
 ```
