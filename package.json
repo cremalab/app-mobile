@@ -14,7 +14,7 @@
     "start:web": "expo start --web",
     "start:visual": "run-p start:visual:expo start:visual:storybook",
     "start:visual:expo": "expo start --config=app-storybook.json --no-dev",
-    "start:visual:expo:ci": "expo start --config=app-storybook.json --no-dev --ios",
+    "start:visual:expo:ci": "expo start --config=app-storybook.json --no-dev --ios --localhost",
     "start:visual:storybook": "start-storybook",
     "start:visual:storybook:ci": "start-storybook --ci",
     "start:visual:ci": "run-p start:visual:expo:ci start:visual:storybook:ci",
@@ -31,7 +31,7 @@
     "test:visual:android": "loki test --targetFilter=android",
     "test:visual:update": "loki update",
     "test:visual:approve": "loki approve",
-    "test:visual:ci": "start-server-and-test start:visual:ci http://localhost:7007 test:visual:ios",
+    "test:visual:ci": "start-server-and-test start:visual:ci \"http://localhost:7007|http://locahost:19002\" test:visual:ios",
     "prepush": "npm run test:ci",
     "postinstall": "patch-package"
   },
