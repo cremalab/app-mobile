@@ -17,7 +17,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm i -g expo-cli 
-      - run: npm ci
-      - run: npm run test:visual:ci
+      - run: open -n "Simulator.app"
+      # - run: npm i -g expo-cli 
+      # - run: npm ci
+      # - run: npm run test:visual:ci
 
