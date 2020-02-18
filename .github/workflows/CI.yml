@@ -18,7 +18,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: open "${DEVELOPER_DIR}/Applications/Simulator.app"
-      # - run: npm i -g expo-cli 
-      # - run: npm ci
-      # - run: npm run test:visual:ci
+      - run: npm i -g expo-cli 
+      - run: npm ci
+      - run: npm run test:visual:ci
 
