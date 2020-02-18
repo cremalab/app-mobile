@@ -35,7 +35,7 @@
     "test:visual:android:ci": "run-s start:android:ci wait test:visual:android",
     "test:visual:update": "loki update",
     "test:visual:approve": "loki approve",
-    "test:visual:ci": "start-server-and-test start:visual:ci \"http://localhost:7007|http://127.0.0.1:19000|http://127.0.0.1:19001|http://127.0.0.1:19002|http://127.0.0.1:19001/src/index.tsx.bundle?platform=android&dev=false&minify=false&hot=false\" test:visual:android:ci",
+    "test:visual:ci": "start-server-and-test start:visual:ci \"http://localhost:7007|http://127.0.0.1:19000|http://127.0.0.1:19001|http://127.0.0.1:19002\" test:visual:android:ci",
     "prepush": "npm run test:ci",
     "postinstall": "patch-package",
     "wait": "sleep 20s"
