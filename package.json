@@ -31,7 +31,7 @@
     "test:visual:android": "loki test --targetFilter=android",
     "test:visual:update": "loki update",
     "test:visual:approve": "loki approve",
-    "test:visual:ci": "start-server-and-test start:visual:ci \"http://localhost:7007|http://locahost:19002\" test:visual:ios",
+    "test:visual:ci": "start-server-and-test start:visual:ci \"http://localhost:7007|http://locahost:19000\" test:visual:ios",
     "prepush": "npm run test:ci",
     "postinstall": "patch-package"
   },
