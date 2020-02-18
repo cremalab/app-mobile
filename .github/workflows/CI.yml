@@ -17,7 +17,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm i -g expo-cli 
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+          expo-cache: true
       - run: npm ci
       - name: run emulator
         uses: reactivecircus/android-emulator-runner@v2
