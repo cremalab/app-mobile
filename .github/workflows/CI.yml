@@ -17,7 +17,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: open -n "Simulator.app"
+      - run: xcrun instruments -w "iPhone 11 Pro (13.3) ["
       # - run: npm i -g expo-cli 
       # - run: npm ci
       # - run: npm run test:visual:ci
