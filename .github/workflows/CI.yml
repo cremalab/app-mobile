@@ -17,7 +17,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: android create avd --force -n test -t android-22 --abi armeabi-v7a -c 100M
+      - run: android create avd --force -n test -k 'system-images;android-29;google_apis_playstore;x86' --abi armeabi-v7a -c 100M
       - run: emulator -avd test -no-audio -no-window
       # - run: open "${DEVELOPER_DIR}/Applications/Simulator.app"
       # - run: npm i -g expo-cli 
