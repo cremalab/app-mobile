@@ -39,7 +39,7 @@
     "prepush": "npm run test:ci",
     "postinstall": "patch-package",
     "wait": "sleep 20s",
-    "ping": "curl http://127.0.0.1:19001/src/index.tsx.bundle?platform=android&dev=false&minify=false&hot=false"
+    "ping": "curl --silent --show-error --output /dev/null http://127.0.0.1:19001/src/index.tsx.bundle?platform=android&dev=false&minify=true&hot=false"
   },
   "dependencies": {
     "expo": "~36.0.0",
