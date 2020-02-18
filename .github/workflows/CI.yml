@@ -3,8 +3,8 @@ name: CI
 on: [push]
 
 jobs:
-  Test:
-    runs-on: ubuntu-latest
+  Visual:
+    runs-on: macos-latest
     env:
       CI: true
 
@@ -16,7 +16,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - run: npm i -g expo-cli 
       - run: npm ci
-      - run: npm run test:lint
-      - run: npm run test:types
-      - run: npm run test:unit
+      - run: npm run test:visual:ci
+
