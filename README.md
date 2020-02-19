@@ -1,5 +1,6 @@
 # Crema App - Mobile 📱
 
+[![Build Status](https://github.com/cremalab/crema-app-mobile/workflows/CI/badge.svg)](https://github.com/cremalab/crema-app-mobile/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project includes configuration and tooling that conforms to Crema's baseline best-practices for a Mobile Application.
@@ -19,10 +20,10 @@ This project includes configuration and tooling that conforms to Crema's baselin
 1. [Install Node/NPM](https://nodejs.org/en/)
 2. [Install NVM](https://github.com/creationix/nvm#installation-and-update) (Node Version Manager)
 3. `nvm install 'lts/*' && nvm use`
-4. `npm i` (install project dependencies)
-5. [Install the ESLint plugin for ~~your editor~~ VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-6. Enable "Auto-Fix on Save" in `settings.json`:
-
+4. `npm i -g expo-cli`
+5. `npm i` (install project dependencies)
+6. [Install the ESLint plugin for ~~your editor~~ VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+7. Enable "Auto-Fix on Save" in `settings.json`:
 ```
 // There will likely be other settings within this JSON object...
 {
@@ -37,17 +38,21 @@ This project includes configuration and tooling that conforms to Crema's baselin
   ]
 }
 ```
+8. Ensure that `XCode` and the related command line tools are setup using [this guide](https://docs.expo.io/versions/latest/workflow/ios-simulator/)
+9. Ensure that `Android Studio` and a virtual device (Emulator) are setup using [this guide](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/)
 
 ## 👟 Run
 
 Run the following scripts with `npm run <SCRIPT_HERE>`:
 
 - `start` - start the expo bundler
-- `start:ios` - start the expo bundler and an iOS simulator
 - `start:android` - start the expo bundler and an android emulator
+- `start:ios` - start the expo bundler and an iOS simulator
 - `start:web` - start the expo bundler and the web app
 - `start:visual` - start component playground with storybook
 - `start:types` - start tsc in watch mode
+- `start:unit` - start the unit tests in watch mode
+- `test:ci` - run the same tests that the CI runs
 - `test:types` - run tsc
 - `test:lint` - run linter
 - `test:lint:fix` - run linter and fix if possible
@@ -90,5 +95,7 @@ src
 │   │   └── test.tsx // Unit Tests (Jest)
 │   ├── decoratorCentered // Used in stories.tsx
 │   └── shallowRender // Used to render components in test.tsx
+├── stories // Directory used to load storybook stories in one place
+│   └── index.tsx
 └── index.tsx // Root Module
 ```
