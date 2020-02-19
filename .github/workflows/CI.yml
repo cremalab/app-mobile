@@ -45,6 +45,7 @@ jobs:
         with:
           expo-version: 3.x
           expo-cache: true
+      - run: xcode-select --switch $DEVELOPER_DIR
       - run: open "${DEVELOPER_DIR}/Applications/Simulator.app"
       - run: npm ci
       - run: npm run test:visual:ci:ios
