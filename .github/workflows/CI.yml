@@ -31,7 +31,7 @@ jobs:
     runs-on: macos-latest
     env:
       CI: true
-      DEVELOPER_DIR: /Applications/Xcode_11.2.app/Contents/Developer
+      # DEVELOPER_DIR: /Applications/Xcode_11.2.app/Contents/Developer
 
     steps:
       - uses: actions/checkout@v1
@@ -45,7 +45,8 @@ jobs:
         with:
           expo-version: 3.x
           expo-cache: true
-      - run: sudo xcode-select --switch /Applications/Xcode_11.2.app
       # - run: open "${DEVELOPER_DIR}/Applications/Simulator.app"
+      - run: ln -s /Applications/Xcode_11.2.app /Applications/Xcode.app
+      - run: sudo xcode-select --switch /Applications/Xcode.app
       - run: npm ci
       - run: npm run test:visual:ci:ios
