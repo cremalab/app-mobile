@@ -30,9 +30,9 @@
     "test:types": "tsc --noEmit",
     "test:visual": "loki test",
     "test:visual:ios": "loki test --targetFilter=ios",
-    "test:visual:ios:ci": "run-s start:ios:ci wait ping test:visual:ios",
+    "test:visual:ios:ci": "run-s start:ios:ci wait ping:ios test:visual:ios",
     "test:visual:android": "loki test --targetFilter=android",
-    "test:visual:android:ci": "run-s start:android:ci wait ping test:visual:android",
+    "test:visual:android:ci": "run-s start:android:ci wait ping:android test:visual:android",
     "test:visual:update": "loki update",
     "test:visual:approve": "loki approve",
     "test:visual:ci:android": "start-server-and-test start:visual:ci \"http://localhost:7007|http://127.0.0.1:19000|http://127.0.0.1:19001|http://127.0.0.1:19002\" test:visual:android:ci",
@@ -40,7 +40,8 @@
     "prepush": "npm run test:ci",
     "postinstall": "patch-package",
     "wait": "sleep 20s",
-    "ping": "curl --silent --show-error --output /dev/null http://127.0.0.1:19001/src/index.tsx.bundle?platform=android&dev=false&minify=true&hot=false"
+    "ping:android": "curl --silent --show-error --output /dev/null http://127.0.0.1:19001/src/index.tsx.bundle?platform=android&dev=false&minify=true&hot=false",
+    "ping:ios": "curl --silent --show-error --output /dev/null http://127.0.0.1:19001/src/index.tsx.bundle?platform=ios&dev=false&minify=true&hot=false"
   },
   "dependencies": {
     "expo": "~36.0.0",

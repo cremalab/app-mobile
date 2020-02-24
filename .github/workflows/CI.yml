@@ -24,6 +24,7 @@ jobs:
       - name: run emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
+          arch: x86_64
           api-level: 29
           script: npm run test:visual:ci:android
           
@@ -45,8 +46,9 @@ jobs:
         with:
           expo-version: 3.x
           expo-cache: true
-      # - run: open "${DEVELOPER_DIR}/Applications/Simulator.app"
       - run: ln -s /Applications/Xcode_11.2.app /Applications/Xcode.app
       - run: sudo xcode-select --switch /Applications/Xcode.app
+      - run: xcode-select --print-path
+      - run: open "/Applications/Xcode.app/Applications/Simulator.app"
       - run: npm ci
       - run: npm run test:visual:ci:ios
