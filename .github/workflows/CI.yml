@@ -41,3 +41,4 @@ jobs:
       - run: npm ci
       - run: expo diagnostics
       - run: expo doctor
+      - run: ./test-expo-start
