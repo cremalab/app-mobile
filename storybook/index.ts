@@ -1,5 +1,6 @@
 import { configure, getStorybookUI } from "@storybook/react-native"
 import "loki/configure-react-native"
+import "./rn-addons"
 
 configure(() => {
   import("../src/stories")
