@@ -2,6 +2,7 @@
 
 [![Build Status](https://github.com/cremalab/crema-app-mobile/workflows/CI/badge.svg)](https://github.com/cremalab/crema-app-mobile/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://expo.io/)
 
 This project includes configuration and tooling that conforms to Crema's baseline best-practices for a Mobile Application.
 

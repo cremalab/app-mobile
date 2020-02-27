@@ -20,3 +20,26 @@ jobs:
       - run: npm run test:lint
       - run: npm run test:types
       - run: npm run test:unit
+
+  Expo:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+          expo-cache: true
+      - run: npm ci
+      - run: expo diagnostics
+      - run: expo doctor
+      - run: ./test-expo-start.sh
+      - run: ./test-expo-watch-mode.sh

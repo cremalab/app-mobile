@@ -1,5 +1,6 @@
-import { getStorybookUI, configure } from "@storybook/react-native"
+import { configure, getStorybookUI } from "@storybook/react-native"
 import "loki/configure-react-native"
+import "./rn-addons"
 
 configure(() => {
   import("../src/stories")
@@ -11,4 +12,5 @@ export const StorybookUIRoot = getStorybookUI({
   port: 7007,
   host: "localhost",
   onDeviceUI: false,
+  asyncStorage: null,
 })
