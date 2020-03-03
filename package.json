@@ -33,10 +33,10 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "expo": "~36.0.0",
+    "expo": "~36.0.2",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
     "react-native-screens": "2.0.0-alpha.12",
     "react-native-web": "~0.12.2"
   },
@@ -73,10 +73,10 @@
     "jest-expo": "^36.0.1",
     "loki": "^0.20.1",
     "npm-run-all": "^4.1.5",
-    "patch-package": "^6.2.0",
+    "patch-package": "^6.2.1",
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.13.0",
-    "typescript": "^3.8.2"
+    "typescript": "^3.8.3"
   },
   "husky": {
     "hooks": {
