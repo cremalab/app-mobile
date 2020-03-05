@@ -22,6 +22,7 @@
     "test:lint": "eslint -c ./.eslintrc.js 'src/**/*.{ts,tsx}'",
     "test:lint:fix": "npm run test:lint -- --fix",
     "test:unit": "npm run test",
+    "test:unit:coverage": "npm run test -- --collectCoverage",
     "test:types": "tsc --noEmit",
     "test:visual": "loki test",
     "test:visual:ios": "loki test --targetFilter=ios",

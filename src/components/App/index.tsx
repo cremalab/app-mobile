@@ -1,23 +1,15 @@
 import React from "react"
-import { SafeAreaView, StyleSheet, Text } from "react-native"
+import { Text } from "react-native"
+import { Container } from "../Container"
 import { Counter } from "../Counter"
 
 export function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <Container>
       <Text>Welcome to crema-app-mobile</Text>
       <Text>Open up App.tsx to start working on your app!</Text>
       <Text>Example interactivity:</Text>
       <Counter />
-    </SafeAreaView>
+    </Container>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-})
