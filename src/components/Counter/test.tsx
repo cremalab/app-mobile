@@ -4,24 +4,44 @@ import { Counter } from "."
 
 describe("Counter", () => {
   it("displays the initial count", () => {
+    // Arrange
+    const text = "Count is: 0"
+
+    // Act
     const { getByText } = render(<Counter />)
-    const text = getByText("Count is: 0")
-    expect(text).toBeDefined()
+    const received = getByText(text)
+
+    // Assert
+    expect(received).toBeDefined()
   })
 
   it("can decrement count", () => {
+    // Arrange
+    const text = "Count is: -1"
+    const buttonText = "-"
+
+    // Act
     const { getByText } = render(<Counter />)
-    const button = getByText("-")
+    const button = getByText(buttonText)
     fireEvent.press(button)
-    const text = getByText("Count is: -1")
-    expect(text).toBeDefined()
+    const received = getByText(text)
+
+    // Assert
+    expect(received).toBeDefined()
   })
 
   it("can increment count", () => {
+    // Arrange
+    const text = "Count is: 1"
+    const buttonText = "+"
+
+    // Act
     const { getByText } = render(<Counter />)
-    const button = getByText("+")
+    const button = getByText(buttonText)
     fireEvent.press(button)
-    const text = getByText("Count is: 1")
-    expect(text).toBeDefined()
+    const received = getByText(text)
+
+    // Assert
+    expect(received).toBeDefined()
   })
 })

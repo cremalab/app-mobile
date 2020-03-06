@@ -2,4 +2,9 @@ import { storiesOf } from "@storybook/react-native"
 import React from "react"
 import { Counter } from "."
 
-storiesOf("Counter", module).add("default", () => <Counter />)
+/**
+ * See Storybook Docs: Writing Stories
+ * https://storybook.js.org/docs/basics/writing-stories/
+ */
+
+storiesOf("Counter", module).add("example", () => <Counter />)

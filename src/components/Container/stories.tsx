@@ -3,7 +3,12 @@ import React from "react"
 import { Text } from "react-native"
 import { Container } from "."
 
-storiesOf("Container", module).add("default", () => (
+/**
+ * See Storybook Docs: Writing Stories
+ * https://storybook.js.org/docs/basics/writing-stories/
+ */
+
+storiesOf("Container", module).add("example", () => (
   <Container>
     <Text>Test</Text>
   </Container>
