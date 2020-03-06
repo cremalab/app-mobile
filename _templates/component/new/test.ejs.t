@@ -1,7 +1,14 @@
 ---
 to: src/components/<%= name %>/test.tsx
 ---
-<% if(useState) { -%>
+<% if(!withExample) { -%>
+import { <%= name %> } from "."
+import React from "react"
+
+describe("<%= name %>", () => {
+  it.todo("...")
+})
+<% } else if(useState) { -%>
 import { <%= name %> } from "."
 import { render, fireEvent } from "@testing-library/react-native"
 import React from "react"

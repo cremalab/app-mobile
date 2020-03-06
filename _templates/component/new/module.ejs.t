@@ -1,7 +1,13 @@
 ---
 to: src/components/<%= name %>/index.tsx
 ---
-<% if(useState) { -%>
+<% if(!withExample) { -%>
+import React from "react"
+
+export function <%= name %>() {
+  return <></>
+}
+<% } else if(useState) { -%>
 import React, { useState } from "react"
 import { Button, StyleSheet, Text, View } from "react-native"
 

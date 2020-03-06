@@ -9,15 +9,38 @@ module.exports = {
         name: "name",
         message: "Component name:",
       })
-      .then(({ name }) => {
+      .then(({ name: nameRaw }) => {
+        const name = i.camelize(nameRaw || "Example", false)
+
         return prompter
           .prompt({
             default: "N",
-            message: "Does component use state?",
-            name: "useState",
+            message: `Did you want to generate <${name} /> with example code?`,
+            name: "withExample",
             type: "toggle",
           })
-          .then(({ useState }) => ({ name: i.camelize(name, false), useState }))
+          .then(({ withExample }) => {
+            if (withExample) {
+              return prompter
+                .prompt({
+                  default: "N",
+                  message: `Did you want to include useState in the example <${name} />?`,
+                  name: "useState",
+                  type: "toggle",
+                })
+                .then(({ useState }) => ({
+                  name,
+                  withExample,
+                  useState,
+                }))
+            }
+
+            return {
+              name,
+              withExample,
+              useState: false,
+            }
+          })
       })
   },
 }
