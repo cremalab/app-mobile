@@ -10,6 +10,7 @@ npm-debug.*
 web-build/
 web-report/
 coverage
+bin/
 
 # macOS
 .DS_Store

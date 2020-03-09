@@ -17,8 +17,10 @@
     "start:visual:storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
     "start:types": "tsc --w",
     "start:unit": "npm run test -- --watch",
-    "test": "jest",
+    "test": "jest src",
     "test:ci": "CI=true run-s test:types test:lint test:unit test:expo",
+    "test:e2e": "detox test",
+    "test:e2e:ci": "start-server-and-test start:ios http://127.0.0.1:19000 test:e2e",
     "test:lint": "eslint -c ./.eslintrc.js 'src/**/*.{ts,tsx}'",
     "test:lint:fix": "npm run test:lint -- --fix",
     "test:unit": "npm run test",
@@ -59,6 +61,8 @@
     "@typescript-eslint/parser": "^2.22.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
+    "detox": "^15.4.4",
+    "detox-expo-helpers": "^0.6.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-react-app": "^5.2.0",
@@ -69,6 +73,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-react-native": "^3.8.1",
+    "expo-detox-hook": "^1.0.10",
     "husky": "^4.2.3",
     "husky-add-issue-tracker": "0.0.9",
     "jest-expo": "^36.0.1",
@@ -77,6 +82,7 @@
     "patch-package": "^6.2.1",
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.13.0",
+    "start-server-and-test": "^1.10.9",
     "typescript": "^3.8.3"
   },
   "husky": {
@@ -93,6 +99,16 @@
       },
       "android": {
         "target": "android.emulator"
+      }
+    }
+  },
+  "detox": {
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone 11 Pro Max"
       }
     }
   }

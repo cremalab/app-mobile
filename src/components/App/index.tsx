@@ -6,7 +6,7 @@ import { Counter } from "../Counter"
 export function App() {
   return (
     <Container>
-      <Text>Welcome to crema-app-mobile</Text>
+      <Text testID="welcome">Welcome to crema-app-mobile</Text>
       <Text>Open up App.tsx to start working on your app!</Text>
       <Text>Example interactivity:</Text>
       <Counter />
