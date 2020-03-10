@@ -60,6 +60,7 @@ jobs:
         with:
           expo-version: 3.x
           expo-cache: true
+      - run: brew tap wix/brew && brew install applesimutils
       - run: cd bin && mkdir Exponent.app && gunzip -c Exponent-2.14.0.tar.gz | tar xopf - -C Exponent.app
       - run: npm i -g detox-cli
       - run: npm ci
