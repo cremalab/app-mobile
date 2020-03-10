@@ -56,6 +56,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+          expo-cache: true
       - run: cd bin && mkdir Exponent.app && gunzip -c Exponent-2.14.0.tar.gz | tar xopf - -C Exponent.app
       - run: npm i -g detox-cli
       - run: npm ci
