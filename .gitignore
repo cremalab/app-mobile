@@ -10,7 +10,7 @@ npm-debug.*
 web-build/
 web-report/
 coverage
-bin/
+bin/Exponent.app
 
 # macOS
 .DS_Store

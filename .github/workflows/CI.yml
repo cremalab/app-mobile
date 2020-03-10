@@ -43,3 +43,21 @@ jobs:
       - run: expo doctor
       - run: ./test-expo-start.sh
       - run: ./test-expo-watch-mode.sh
+  E2E:
+    runs-on: macos-latest
+    env:
+      CI: true
+    
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: cd bin && gunzip -c Exponent-2.14.0.tar.gz | tar xopf -
+      - run: cd bin && mv Exponent-2.14.0 Exponent.app
+      - run: npm i -g detox-cli
+      - run: npm ci
+      - run: npm run test:e2e:ci
