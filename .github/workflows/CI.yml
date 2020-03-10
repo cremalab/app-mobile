@@ -56,8 +56,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: cd bin && gunzip -c Exponent-2.14.0.tar.gz | tar xopf -
-      - run: cd bin && mv Exponent-2.14.0 Exponent.app
+      - run: cd bin && mkdir Exponent.app && gunzip -c Exponent-2.14.0.tar.gz | tar xopf - -C Exponent.app
       - run: npm i -g detox-cli
       - run: npm ci
       - run: npm run test:e2e:ci
