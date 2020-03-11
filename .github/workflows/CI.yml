@@ -62,6 +62,10 @@ jobs:
           expo-cache: true
       - run: brew tap wix/brew && brew install applesimutils
       - run: cd bin && mkdir Exponent.app && gunzip -c Exponent-2.14.0.tar.gz | tar xopf - -C Exponent.app
+      - run: ln -s /Applications/Xcode_11.2.app /Applications/Xcode.app
+      - run: sudo xcode-select --switch /Applications/Xcode.app
+      - run: xcode-select --print-path
+      - run: open "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
       - run: npm i -g detox-cli
       - run: npm ci
       - run: npm run test:e2e:ci
