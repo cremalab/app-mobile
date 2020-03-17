@@ -28,12 +28,16 @@ const styles = StyleSheet.create({
 })
 <% } else { -%>
 import React from "react"
-import { StyleSheet, Text } from "react-native"
+import { StyleSheet, Text, View } from "react-native"
 
 type Props = Readonly<{}>
 
 export function <%= name %>(_: Props) {
-  return <Text style={styles.container}><%= name %></Text>
+  return (
+    <View style={styles.container}>
+      <Text><%= name %></Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({

@@ -6,7 +6,7 @@ import { <%= name %> } from "."
 import React from "react"
 
 describe("<%= name %>", () => {
-  it.todo("...")
+  it.todo(`<%= name %> needs to be tested`)
 })
 <% } else if(useState) { -%>
 import { <%= name %> } from "."
