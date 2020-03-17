@@ -4,11 +4,16 @@ import { App } from "."
 
 describe("App", () => {
   it("renders", async () => {
+    // Arrange
+    const title = "Welcome to crema-app-mobile"
+    const subtitle = "Open up App.tsx to start working on your app!"
+
+    // Act
     const { getByText, queryByText } = render(<App />)
+    await waitForElement(() => queryByText(title))
+    const received = getByText(subtitle)
 
-    await waitForElement(() => queryByText("Welcome to crema-app-mobile"))
-    const text = getByText("Open up App.tsx to start working on your app!")
-
-    expect(text).toBeDefined()
+    // Assert
+    expect(received).toBeDefined()
   })
 })

@@ -162,6 +162,9 @@ Run the following scripts with `npm run <SCRIPT_HERE>`:
 - `test:visual` - run visual tests with loki (this assumes that storybook is running)
 - `test:visual:approve` - approve visual changes
 - `test:visual:update` - update or create visual references
+- `new:component` - generate a new component
+- `new:util` - generate a new util
+- `new:type` - generate a new type
 
 > These scripts are located in `package.json` and do not represent the entirety of available scripts, but are the most commonly used.
 

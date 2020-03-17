@@ -5,15 +5,19 @@ import { Container } from "."
 
 describe("Container", () => {
   it("renders", async () => {
+    // Arrange
+    const text = "Test"
+
+    // Act
     const { getByText, queryByText } = render(
       <Container>
-        <Text>Test</Text>
+        <Text>{text}</Text>
       </Container>,
     )
+    await waitForElement(() => queryByText(text))
+    const received = getByText(text)
 
-    await waitForElement(() => queryByText("Test"))
-    const text = getByText("Test")
-
-    expect(text).toBeDefined()
+    // Assert
+    expect(received).toBeDefined()
   })
 })
