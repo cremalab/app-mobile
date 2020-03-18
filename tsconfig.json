@@ -1,18 +1,8 @@
 {
+  "extends": "@cremalab/app-config/tsconfig/index.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": ["dom", "esnext"],
-    "moduleResolution": "node",
-    "noEmit": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "resolveJsonModule": true,
     "types": ["jest"]
   }
 }

@@ -1,4 +1,4 @@
 import "./Welcome"
-import "../../src/components/App/stories"
-import "../../src/components/Counter/stories"
-import "../../src/components/Container/stories"
+import "../components/App/stories"
+import "../components/Counter/stories"
+import "../components/Container/stories"
