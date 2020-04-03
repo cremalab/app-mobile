@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "config:base",
+    ":semanticCommitType(fix)"
+  ],
+  "branchPrefix": "develop-renovate-",
+  "prCreation": "not-pending",
+  "labels": [
+    "maintenance"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "automerge": false,
+      "reviewers": [
+        "roblafeve",
+        "blaketarter"
+      ]
+    },
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "packageNames": [
+        "expo",
+        "react",
+        "react-dom",
+        "react-native",
+        "react-native-screens",
+        "react-native-web",
+        "@types/react",
+        "@types/react-native",
+        "jest-expo"
+      ],
+      "automerge": false,
+      "enabled": true,
+      "groupName": "expo"
+    }
+  ]
+}
