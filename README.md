@@ -40,7 +40,7 @@ This project includes configuration and tooling that conforms to Crema's baselin
 }
 ```
 8. Ensure that `XCode` and the related command line tools are setup using [this guide](https://docs.expo.io/versions/latest/workflow/ios-simulator/)
-9. Ensure that `Android Studio` and a virtual device (Emulator) are setup using [this guide](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/)
+9. Ensure that `Android Studio` and a virtual device (Emulator) are setup using [this guide](https://docs.expo.io/versions/v37.0.0/workflow/android-studio-emulator/)
 10. Ensure that `adb` is setup correctly, if you have followed step `9` it should be.
     - If `adb --version` outputs a version then you should be good to go.
 
@@ -64,7 +64,7 @@ There are a number of different ways to run your app, some virtual and some on p
 
 As long as XCode is setup correctly you should be able to start the Simulator directly from the Expo dev tools by pressing `i` in the terminal, clicking `Run on iOS simulator`, or by starting the app with `npm run start:ios`.
 
-- [Expo Docs - iOS Simulator](https://docs.expo.io/versions/v36.0.0/workflow/ios-simulator/)
+- [Expo Docs - iOS Simulator](https://docs.expo.io/versions/v37.0.0/workflow/ios-simulator/)
 
 #### Android Emulator
 
@@ -77,13 +77,13 @@ If Android Studio is installed correctly you should be able to open an emulator 
     - If there are no devices in the list then create one by clicking `Create Virtual Device` 
 5. You should be able to launch the app on the Emulator from the Expo dev tools by pressing `a` in the terminal, clicking `Run on Android device/emulator`, or by starting the app with `npm run start:android`.
 
-- [Expo Docs - Android Studio Emulator](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/)
+- [Expo Docs - Android Studio Emulator](https://docs.expo.io/versions/v37.0.0/workflow/android-studio-emulator/)
 
 #### Actual Device
 
 _More to come in the future, for now here are some convenient links to consider._
 
-- [Expo Docs - Testing on Physical Devices](https://docs.expo.io/versions/v36.0.0/guides/testing-on-devices/)
+- [Expo Docs - Testing on Physical Devices](https://docs.expo.io/versions/v37.0.0/guides/testing-on-devices/)
 
 ## 📋 Test
 
@@ -131,17 +131,17 @@ To start Loki you run `npm run test:visual`, `npm run test:visual:ios`, or `npm 
 
 _More to come in the future, for now here are some convenient links to consider._
 
-- [Expo Docs - Configuration](https://docs.expo.io/versions/v36.0.0/workflow/configuration/)
-- [Expo Docs - Publishing](https://docs.expo.io/versions/v36.0.0/workflow/publishing/)
-- [Expo Docs - Distribution](https://docs.expo.io/versions/v36.0.0/distribution/introduction/)
+- [Expo Docs - Configuration](https://docs.expo.io/versions/v37.0.0/workflow/configuration/)
+- [Expo Docs - Publishing](https://docs.expo.io/versions/v37.0.0/workflow/publishing/)
+- [Expo Docs - Distribution](https://docs.expo.io/versions/v37.0.0/distribution/introduction/)
 
 ## Troubleshoot
 
 _More to come in the future, for now here are some convenient links to consider._
 
-- [Expo Docs - Logging](https://docs.expo.io/versions/v36.0.0/workflow/logging/)
-- [Expo Docs - Debugging](https://docs.expo.io/versions/v36.0.0/workflow/debugging/)
-- [Expo Docs - Common Development Errors](https://docs.expo.io/versions/v36.0.0/workflow/common-development-errors/)
+- [Expo Docs - Logging](https://docs.expo.io/versions/v37.0.0/workflow/logging/)
+- [Expo Docs - Debugging](https://docs.expo.io/versions/v37.0.0/workflow/debugging/)
+- [Expo Docs - Common Development Errors](https://docs.expo.io/versions/v37.0.0/workflow/common-development-errors/)
 
 ## ⚙️ Scripts
 
