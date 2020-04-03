@@ -42,7 +42,7 @@ async function cacheResources(): Promise<any> {
 }
 
 function cacheImages(images: Array<string | number>) {
-  return images.map(image => {
+  return images.map((image) => {
     if (typeof image === "string") {
       return Image.prefetch(image)
     } else {
@@ -52,5 +52,5 @@ function cacheImages(images: Array<string | number>) {
 }
 
 function cacheFonts(fonts: Array<Parameters<typeof Font.loadAsync>[0]>) {
-  return fonts.map(font => Font.loadAsync(font))
+  return fonts.map((font) => Font.loadAsync(font))
 }
