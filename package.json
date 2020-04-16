@@ -37,7 +37,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "expo": "37.0.3",
+    "expo": "37.0.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
