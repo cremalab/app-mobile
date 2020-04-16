@@ -20,22 +20,6 @@
     {
       "updateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
-    },
-    {
-      "packageNames": [
-        "expo",
-        "react",
-        "react-dom",
-        "react-native",
-        "react-native-screens",
-        "react-native-web",
-        "@types/react",
-        "@types/react-native",
-        "jest-expo"
-      ],
-      "automerge": false,
-      "enabled": true,
-      "groupName": "expo"
     }
   ]
 }
