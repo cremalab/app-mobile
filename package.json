@@ -37,11 +37,11 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "expo": "37.0.3",
+    "expo": "37.0.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
-    "react-native-screens": "2.2.0",
+    "react-native-screens": "2.5.0",
     "react-native-web": "0.12.2"
   },
   "devDependencies": {
@@ -55,8 +55,8 @@
     "@storybook/react-native-server": "5.3.18",
     "@testing-library/react-native": "5.0.3",
     "@types/jest": "25.2.1",
-    "@types/react": "16.9.32",
-    "@types/react-native": "0.62.1",
+    "@types/react": "16.9.34",
+    "@types/react-native": "0.62.2",
     "@types/react-router-native": "5.1.0",
     "@typescript-eslint/eslint-plugin": "2.28.0",
     "@typescript-eslint/parser": "2.28.0",
