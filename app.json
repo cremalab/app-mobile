@@ -1,9 +1,8 @@
 {
   "expo": {
-    "name": "crema-app-native",
-    "slug": "crema-app-native",
+    "name": "crema-app-mobile",
+    "slug": "crema-app-mobile",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android",
