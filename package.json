@@ -45,7 +45,7 @@
     "react-native-web": "0.12.3"
   },
   "devDependencies": {
-    "@babel/core": "7.10.2",
+    "@babel/core": "7.10.3",
     "@expo/webpack-config": "0.12.15",
     "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-links": "5.3.19",
