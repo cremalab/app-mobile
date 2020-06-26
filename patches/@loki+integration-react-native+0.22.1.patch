@@ -1,0 +1,13 @@
+diff --git a/node_modules/@loki/integration-react-native/src/configure-storybook-react-native.js b/node_modules/@loki/integration-react-native/src/configure-storybook-react-native.js
+index 6755479..9eab397 100644
+--- a/node_modules/@loki/integration-react-native/src/configure-storybook-react-native.js
++++ b/node_modules/@loki/integration-react-native/src/configure-storybook-react-native.js
+@@ -123,7 +123,7 @@ async function configureStorybook() {
+   };
+ 
+   const prepare = () => {
+-    if (!'loki' in global) {
++    if (!('loki' in global)) {
+       global.loki = {};
+     }
+     global.loki.isRunning = true;
