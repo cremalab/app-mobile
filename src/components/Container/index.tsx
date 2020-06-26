@@ -2,6 +2,7 @@
 import { AppLoading } from "expo"
 import { Asset } from "expo-asset"
 import * as Font from "expo-font"
+import * as SplashScreen from "expo-splash-screen"
 import React, { ReactNode, useState } from "react"
 import { Image, SafeAreaView, StyleSheet } from "react-native"
 
@@ -11,8 +12,12 @@ export function Container({ children }: { children: ReactNode }) {
   return !isReady ? (
     <AppLoading
       startAsync={cacheResources}
-      onFinish={() => setIsReady(true)}
+      onFinish={() => {
+        setIsReady(true)
+        SplashScreen.hideAsync()
+      }}
       onError={console.warn}
+      autoHideSplash={false}
     />
   ) : (
     <SafeAreaView style={styles.container}>{children}</SafeAreaView>
