@@ -16,10 +16,65 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+    
       - run: npm ci
       - run: npm run test:lint
       - run: npm run test:types
       - run: npm run test:unit
+
+  Visual-Android:
+    runs-on: macos-latest
+    env:
+      CI: true
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+          expo-cache: true
+      - run: npm ci
+      - run: expo diagnostics
+      - run: expo doctor
+      - name: run emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          arch: x86_64
+          api-level: 29
+          script: npm run test:visual:ci:android
+          
+  Visual-iOS:
+    runs-on: macos-latest
+    env:
+      CI: true
+      # DEVELOPER_DIR: /Applications/Xcode_11.2.app/Contents/Developer
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - uses: expo/expo-github-action@v5
+        with:
+          expo-version: 3.x
+          expo-cache: true
+      - run: ln -s /Applications/Xcode_11.2.app /Applications/Xcode.app
+      - run: sudo xcode-select --switch /Applications/Xcode.app
+      - run: xcode-select --print-path
+      - run: open "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+      - run: npm ci
+      - run: expo diagnostics
+      - run: expo doctor
+      - run: npm run test:visual:ci:ios
 
   Expo:
     runs-on: ubuntu-latest
