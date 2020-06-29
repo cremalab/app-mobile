@@ -31,9 +31,9 @@
     "test:visual:update": "loki update",
     "test:visual:approve": "loki approve",
     "test:expo": "expo doctor && ./test-expo-start.sh && ./test-expo-watch-mode.sh",
-    "new:component": "hygen component new",
-    "new:type": "hygen type new",
-    "new:util": "hygen util new",
+    "new:component": "cremalab-scripts-mobile new component",
+    "new:type": "cremalab-scripts-mobile new type",
+    "new:util": "cremalab-scripts-mobile new util",
     "prepush": "npm run test:ci",
     "postinstall": "patch-package"
   },
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.10.3",
+    "@cremalab/scripts-mobile": "^0.4.0",
     "@expo/webpack-config": "0.12.17",
     "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-links": "5.3.19",
@@ -76,7 +77,6 @@
     "eslint-plugin-react-native": "3.8.1",
     "husky": "4.2.5",
     "husky-add-issue-tracker": "0.0.9",
-    "hygen": "5.0.3",
     "jest": "26.1.0",
     "jest-expo": "38.0.2",
     "loki": "0.22.1",
