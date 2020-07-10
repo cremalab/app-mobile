@@ -1,4 +1,4 @@
-const { spawn } = require("child_process")
+const { spawn } = require("cross-spawn")
 
 let hasError = false
 
