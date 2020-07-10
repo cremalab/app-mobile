@@ -1,7 +1,5 @@
 const { spawn } = require("child_process")
 
-const ls = spawn("npm", ["run", "start:ci"])
-
 let hasError = false
 
 const watchModeRegExp = /Watch\smode\sis\snot\ssupported\sin\sthis\senvironment/
@@ -45,16 +43,18 @@ function testExpoProcess(exitOnFail = false) {
   }
 }
 
-ls.stdout.on("data", (data) => {
+const expo = spawn("npm", ["run", "start:ci"])
+
+expo.stdout.on("data", (data) => {
   testExpoStdOut(data)
 })
 
-ls.stderr.on("data", (data) => {
+expo.stderr.on("data", (data) => {
   console.log(String(data))
   hasError = true
 })
 
-ls.on("error", (error) => {
+expo.on("error", (error) => {
   console.log(String(error.message))
   process.exit(1)
 })
