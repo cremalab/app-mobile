@@ -41,5 +41,4 @@ jobs:
       - run: npm ci
       - run: expo diagnostics
       - run: expo doctor
-      - run: ./test-expo-start.sh
-      - run: ./test-expo-watch-mode.sh
+      - run: node expo-test.js
