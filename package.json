@@ -20,7 +20,7 @@
     "start:unit": "npm run test -- --watch",
     "test": "./node_modules/jest/bin/jest.js .",
     "test:ci": "cross-env CI=true run-s test:types test:lint test:unit test:expo",
-    "test:lint": "eslint -c ./.eslintrc.js './src' --ext .ts,.tsx",
+    "test:lint": "eslint -c ./.eslintrc.js ./src --ext .ts,.tsx",
     "test:lint:fix": "npm run test:lint -- --fix",
     "test:unit": "npm run test",
     "test:unit:coverage": "npm run test -- --collectCoverage",
