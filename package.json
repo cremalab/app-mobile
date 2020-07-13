@@ -18,7 +18,7 @@
     "start:visual:storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
     "start:types": "tsc --w",
     "start:unit": "npm run test -- --watch",
-    "test": "./node_modules/jest/bin/jest.js",
+    "test": "./node_modules/jest/bin/jest.js ./src",
     "test:ci": "cross-env CI=true run-s test:types test:lint test:unit test:expo",
     "test:lint": "eslint -c ./.eslintrc.js ./src --ext .ts,.tsx",
     "test:lint:fix": "npm run test:lint -- --fix",
