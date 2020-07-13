@@ -12,7 +12,8 @@ jobs:
       CI: true
 
     steps:
-      - uses: actions/checkout@v1
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v2
       - uses: actions/cache@v1
         with:
           path: ~/.npm
@@ -33,7 +34,8 @@ jobs:
       CI: true
     
     steps:
-      - uses: actions/checkout@v1
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v2
       - uses: actions/cache@v1
         with:
           path: ~/.npm
