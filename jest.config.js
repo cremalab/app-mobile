@@ -1,7 +1,6 @@
-const jestPreset = require("@testing-library/react-native/jest-preset")
 const expoPreset = require("jest-expo/jest-preset")
 
-module.exports = Object.assign(expoPreset, jestPreset, {
+module.exports = Object.assign(expoPreset, {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   setupFilesAfterEnv: ["./src/setupTests.ts"],
   collectCoverageFrom: [
@@ -18,7 +17,6 @@ module.exports = Object.assign(expoPreset, jestPreset, {
   ],
   transformIgnorePatterns: [
     ...expoPreset.transformIgnorePatterns,
-    ...jestPreset.transformIgnorePatterns,
     "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.|react-navigation|@react-navigation/.|@unimodules/.*|unimodules|sentry-expo|native-base)",
   ],
 })
