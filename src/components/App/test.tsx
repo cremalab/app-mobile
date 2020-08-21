@@ -1,4 +1,4 @@
-import { render, waitForElement } from "@testing-library/react-native"
+import { render, waitFor } from "@testing-library/react-native"
 import React from "react"
 import { App } from "."
 
@@ -10,7 +10,7 @@ describe("App", () => {
 
     // Act
     const { getByText, queryByText } = render(<App />)
-    await waitForElement(() => queryByText(title))
+    await waitFor(() => queryByText(title))
     const received = getByText(subtitle)
 
     // Assert
