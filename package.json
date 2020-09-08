@@ -51,7 +51,7 @@
   "devDependencies": {
     "@babel/core": "7.11.6",
     "@cremalab/scripts-mobile": "0.4.0",
-    "@expo/webpack-config": "0.12.28",
+    "@expo/webpack-config": "0.12.29",
     "@storybook/addon-actions": "5.3.21",
     "@storybook/addon-links": "5.3.21",
     "@storybook/addon-ondevice-actions": "5.3.21",
