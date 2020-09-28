@@ -41,17 +41,17 @@
   },
   "dependencies": {
     "expo": "39.0.3",
-    "expo-splash-screen": "0.5.0",
+    "expo-splash-screen": "0.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.0.tar.gz",
-    "react-native-screens": "2.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.0.tar.gz",
+    "react-native-screens": "2.10.1",
     "react-native-web": "0.13.14"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
     "@cremalab/scripts-mobile": "0.5.0",
-    "@expo/webpack-config": "0.12.31",
+    "@expo/webpack-config": "0.12.35",
     "@storybook/addon-actions": "5.3.21",
     "@storybook/addon-links": "5.3.21",
     "@storybook/addon-ondevice-actions": "5.3.23",
