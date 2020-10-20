@@ -46,7 +46,7 @@
     "react-dom": "16.14.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.0.tar.gz",
     "react-native-screens": "2.10.1",
-    "react-native-web": "0.14.2"
+    "react-native-web": "0.14.3"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
