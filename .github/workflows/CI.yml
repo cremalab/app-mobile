@@ -44,7 +44,7 @@ jobs:
             ${{ runner.os }}-node-
       - uses: expo/expo-github-action@v5
         with:
-          expo-version: 3.x
+          expo-version: 4.x
           expo-cache: true
       - run: npm ci
       - run: expo diagnostics
