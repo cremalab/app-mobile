@@ -83,7 +83,7 @@
     "husky-add-issue-tracker": "0.1.1",
     "jest": "26.6.3",
     "jest-expo": "39.0.0",
-    "loki": "0.26.0",
+    "loki": "0.27.0",
     "npm-run-all": "4.1.5",
     "patch-package": "6.2.2",
     "prettier": "2.2.1",
