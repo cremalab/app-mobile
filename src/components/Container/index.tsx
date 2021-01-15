@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { AppLoading } from "expo"
+import AppLoading from "expo-app-loading"
 import { Asset } from "expo-asset"
 import * as Font from "expo-font"
 import * as SplashScreen from "expo-splash-screen"
@@ -43,7 +43,7 @@ async function cacheResources(): Promise<any> {
     // FontAwesome.font
   ])
 
-  await Promise.all([...imageAssets, ...fontAssets])
+  await Promise.all([...imageAssets, ...fontAssets] as Promise<unknown>[])
 }
 
 function cacheImages(images: Array<string | number>) {
