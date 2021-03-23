@@ -60,7 +60,7 @@
     "@storybook/react-native": "5.3.23",
     "@storybook/react-native-server": "5.3.23",
     "@testing-library/react-native": "7.1.0",
-    "@types/jest": "26.0.20",
+    "@types/jest": "26.0.21",
     "@types/react": "17.0.0",
     "@types/react-native": "0.63.50",
     "@types/react-router-native": "5.1.0",
