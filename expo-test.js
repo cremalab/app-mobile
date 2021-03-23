@@ -5,7 +5,7 @@ let hasError = false
 const watchModeRegExp = /Watch\smode\sis\snot\ssupported\sin\sthis\senvironment/
 let isWatchModeNotSupported = false
 
-const devToolsRegExp = /Expo\sDevTools\sis\srunning/
+const devToolsRegExp = /Developer\stools\srunning/
 let isDevToolsRunning = false
 
 const appRunningRegExp = /Your\snative\sapp\sis\srunning/
