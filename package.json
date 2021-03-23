@@ -42,7 +42,7 @@
   "dependencies": {
     "expo": "40.0.1",
     "expo-app-loading": "1.0.1",
-    "expo-splash-screen": "0.9.0",
+    "expo-splash-screen": "0.8.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
