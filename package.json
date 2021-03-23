@@ -62,7 +62,7 @@
     "@testing-library/react-native": "7.1.0",
     "@types/jest": "26.0.21",
     "@types/react": "17.0.0",
-    "@types/react-native": "0.63.50",
+    "@types/react-native": "0.64.0",
     "@types/react-router-native": "5.1.0",
     "@typescript-eslint/eslint-plugin": "4.14.2",
     "@typescript-eslint/parser": "4.14.2",
