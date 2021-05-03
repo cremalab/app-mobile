@@ -37,7 +37,8 @@
     "new:type": "cremalab-scripts-mobile new type",
     "new:util": "cremalab-scripts-mobile new util",
     "prepush": "npm run test:ci",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "prepare": "husky install"
   },
   "dependencies": {
     "expo": "40.0.1",
@@ -80,7 +81,7 @@
     "eslint-plugin-react": "7.23.2",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-react-native": "3.10.0",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "husky-add-issue-tracker": "0.1.1",
     "jest": "26.6.3",
     "jest-expo": "40.0.2",
@@ -90,12 +91,6 @@
     "prettier": "2.2.1",
     "react-test-renderer": "17.0.2",
     "typescript": "4.2.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run prepush",
-      "prepare-commit-msg": "husky-add-issue-tracker"
-    }
   },
   "loki": {
     "requireReference": true,
