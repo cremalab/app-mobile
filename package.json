@@ -37,7 +37,8 @@
     "new:type": "cremalab-scripts-mobile new type",
     "new:util": "cremalab-scripts-mobile new util",
     "prepush": "npm run test:ci",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "prepare": "husky install"
   },
   "dependencies": {
     "expo": "40.0.1",
@@ -90,12 +91,6 @@
     "prettier": "2.2.1",
     "react-test-renderer": "17.0.2",
     "typescript": "4.2.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run prepush",
-      "prepare-commit-msg": "husky-add-issue-tracker"
-    }
   },
   "loki": {
     "requireReference": true,
