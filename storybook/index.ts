@@ -3,7 +3,7 @@ import "loki/configure-react-native"
 import "./rn-addons"
 
 configure(() => {
-  import("../src/stories")
+  require("../src/stories")
 }, module)
 
 // Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
