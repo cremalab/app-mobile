@@ -51,7 +51,7 @@
     "react-native-web": "0.16.3"
   },
   "devDependencies": {
-    "@babel/core": "7.14.2",
+    "@babel/core": "7.14.3",
     "@cremalab/scripts-mobile": "0.10.0",
     "@expo/webpack-config": "0.12.63",
     "@storybook/addon-actions": "6.2.9",
