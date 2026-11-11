@@ -41,7 +41,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "expo": "40.0.1",
+    "expo": "48.0.0",
     "expo-app-loading": "1.0.1",
     "expo-splash-screen": "0.8.1",
     "react": "17.0.2",
